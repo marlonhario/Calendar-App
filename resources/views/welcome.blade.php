@@ -118,7 +118,8 @@
                     <div class="col-md-7">
                         <h4><strong>{{date("M")}} {{date("Y")}}</strong></h4>
                         <ul class="list-group">
-                            {{$number = cal_days_in_month(CAL_GREGORIAN, date("m"), date("Y"))}}    
+                            <?php $number = cal_days_in_month(CAL_GREGORIAN, date("m"), date("Y")); ?>
+          
                             @for ($i=1; $i <= $number; $i++)
                                 <li class="list-group-item d-flex bg-lightBlue">
                                     <p>{{$i}} {{date('D', strtotime($i."-".date("M")."-".date("Y")))}}</p>
