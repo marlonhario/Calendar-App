@@ -54,7 +54,7 @@ class CalendarController extends Controller
         }
 
         if ($day_clone) {
-            if(!empty($request->event) && $day_avail && ($startTime < $endTime)) { 
+            if(!empty($request->event) && $day_avail && ($startTime <= $endTime)) { 
                
                     
                     // Loop between timestamps, 24 hours at a time
